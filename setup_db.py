@@ -11,6 +11,9 @@ cursor.execute('''
     )
 ''')
 
+cursor.execute("DELETE FROM faq")
+#clears out old rows first, so running this file twice doesn't create duplicate answers
+
 connection.commit()
 faq_entries = [
     ("bus transport unilink route", "Unilink is the University's own bus service. Key routes: U1 connects Southampton Airport Parkway, Highfield Campus, Portswood, Civic Centre, West Quay, Town Quay and NOCS. U2 connects Highfield Campus, Avenue Campus, Bassett Green and Southampton Central Station. U6 connects Southampton General Hospital, Boldrewood Campus, Highfield Campus, Portswood, Civic Centre and Southampton Central Station."),
